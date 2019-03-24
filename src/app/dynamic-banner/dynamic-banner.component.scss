@@ -1,0 +1,56 @@
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+.banner {
+  max-width: 600px;
+}
+img.card-img {
+}
+.card img {
+  max-height: 200px;
+  min-height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: auto;
+}
+.card.plan img {
+  min-width: unset;
+  max-height: unset;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-style: none !important;
+  background-position: center;
+  @include for-desktop-up {
+    min-height: 418px;
+  }
+}
+.card-img-overlay .row {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+a.btn {
+  margin-top: 23px;
+}
+.card-block {
+  top: 30%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.card-block {
+  text-align: center;
+}
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+.img-square-wrapper {
+  height: 100%;
+  width: 100%;
+}

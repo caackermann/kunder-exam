@@ -1,0 +1,50 @@
+<div *ngIf="this.product.show" class="m-auto banner">
+  <div *ngIf="this.product.type === 'plan'">
+    <div class="card bg-dark text-white">
+      <img
+        class="card-img"
+        [style.background-image]="'url(' + product.backgroundImg + ')'"
+      />
+      <div class="card-img-overlay container">
+        <div class="row">
+          <div class="col-sm-8 text-center p-1">
+            <h4>{{ product.productName }}</h4>
+            <p class="card-text">{{ product.productDescription }}</p>
+          </div>
+          <div class="col-sm-4 text-center">
+            <a [href]="product.link" class="btn btn-success" role="button">{{
+              product.buttonText
+            }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="this.product.type === 'cellphone'" class="container py-3 ">
+    <div class="container-fluid">
+      <div class="row ">
+        <div class="col-12 mt-3">
+          <div class="card plan">
+            <div class="card-horizontal">
+              <div class="img-square-wrapper">
+                <img
+                  [style.background-image]="'url(' + product.productImg + ')'"
+                  class="w-100"
+                  style="border-style: none !important"
+                />
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">
+                  {{ product.productName }}
+                </h4>
+                <p class="card-text">
+                  {{ product.productDescription }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
